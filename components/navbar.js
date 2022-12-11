@@ -4,7 +4,6 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Image from "next/image";
-import { useSession, signIn, signOut } from "next-auth/react";
 import Button from "react-bootstrap/Button";
 
 const dropdownItems = [
@@ -13,7 +12,7 @@ const dropdownItems = [
 ];
 
 export default function NavBar() {
-    const { data: session } = useSession();
+    const session = true; //TODO: temporary, until we implement a session provider without nextauth
     return (
         <>
             <Navbar bg="light" expand="sm">
